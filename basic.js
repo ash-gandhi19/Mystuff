@@ -5,7 +5,7 @@ b=60;
 console.log(a);
 console.log(b);
 
-
+ 
 //copy by value
 var arr1=[3,4,5,6,7];
 
