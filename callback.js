@@ -1,4 +1,4 @@
-var message = document.getElementById('showmsg');
+/*var message = document.getElementById('showmsg');
 
 setTimeout(()=>{
     message.innerHTML = 10;
@@ -32,5 +32,59 @@ setTimeout(()=>{
                 },1000)
             },1000)
         },1000)
-},1000)
+},1000)*/
+
+
+//todays task
+
+function My_Function(number1, callback) {
+    console.log("checking number is prime/composite and factorial");
+    callback(number1, factorial);
+}
+function prime(data, factorial) {
+    for (var i = 2; i < data; i++) {
+        if (data % i === 0) {
+            console.log(data + " is not a prime number");
+            composite(data, factorial);
+        } else {
+            console.log(data + " is a prime number");
+        }
+        factorial(data);
+    }
+} 
+function composite(comnum, factorial) {
+    comnum = 12;
+    var i;
+    var count = 0;
+
+    for (i = 1; i <= comnum; i++) {
+        if (comnum % i === 0)
+            count++;
+    }
+    if (count > 2)
+        console.log(comnum + " is a composite number");
+    else
+        console.log(comnum + " is a not composite number");
+    factorial(comnum);
+
+}
+function factorial(data) {
+    if (data < 0) {
+        console.log('negative number does not exist.');
+    }
+    // if number is 0
+    else if (data === 0) {
+        console.log(`The factorial of ${data} is 1.`);
+    }
+    // if number is positive
+    else {
+        let fact = 1;
+        for (i = 1; i <= data; i++) {
+            fact *= i;
+        }
+        console.log(`The factorial of ${data} is ${fact}.`);
+    }
+}
+
+My_Function(5, prime);
 
