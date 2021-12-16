@@ -39,21 +39,32 @@ setTimeout(()=>{
 
 function My_Function(number1, callback) {
     console.log("checking number is prime/composite and factorial");
-    callback(number1, factorial);
+    callback(number1);
 }
-function prime(data, factorial) {
-    for (var i = 2; i < data; i++) {
-        if (data % i === 0) {
-            console.log(data + " is not a prime number");
-            composite(data, factorial);
-        } else {
-            console.log(data + " is a prime number");
-        }
+function prime(data) {
+
+
+    var i = 1;
+    var count = 0;
+
+    for (i = 1; i <= data; i++) {
+        if (data % i === 0)
+            count++;
+    }
+    if (count == 2) {
+        console.log(data + " is a prime number");
         factorial(data);
     }
-} 
+    else {
+        console.log(data + " is not a prime number");
+        composite(data, factorial);
+
+    }
+
+
+}
 function composite(comnum, factorial) {
-    comnum = 12;
+
     var i;
     var count = 0;
 
@@ -86,5 +97,5 @@ function factorial(data) {
     }
 }
 
-My_Function(5, prime);
+My_Function(44, prime);
 
