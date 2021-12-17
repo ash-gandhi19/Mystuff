@@ -16,9 +16,8 @@ function display_data(url,callback){
 function tableformat(data){
 
     var newdd =data;
-    console.log(newdd);
   console.log(newdd[0].first_name);
-  console.log(423);
+ 
     /*var datatoprint="";
 for(var i=0;i<10;i++){
  
